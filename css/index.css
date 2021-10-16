@@ -35,10 +35,8 @@
 body {
     font: var(--headline1);
     /* color: var(--white); */
-    /* background-color: var(--black); */
+    background-color: var(--white);
 }
-
-.header {}
 
 .wrapper {
     max-inline-size: 370px;
@@ -51,7 +49,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-block-start: 40px;
+    margin-block: 40px;
 }
 
 .button {
@@ -91,6 +89,53 @@ body {
     font: var(--body1-regular-default)
 }
 
+.grid-markdown {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* max-inline-size: 1104px; */
+    justify-content: center;
+    margin-block: 56px;
+}
+
+.markdown,
+.result-markdown {
+    display: block;
+    margin: auto;
+}
+
+.result {
+    /* border: 1px solid blue; */
+    block-size: 741px;
+    inline-size: 540px;
+}
+
+.result-markdown .headline-2 {
+    font: var(--headline2);
+    color: var(--black);
+}
+
+.result-markdown .headline-5 {
+    font: var(--headline5);
+    color: var(--grey-10);
+    margin-block-end: 32px;
+}
+
+.textArea {
+    resize: none;
+    border: none;
+    block-size: 741px;
+    inline-size: 540px;
+    background-color: var(--grey);
+    box-sizing: border-box;
+    padding-block: 16px;
+    padding-inline: 12px;
+}
+
+.textArea:focus {
+    outline: none;
+}
+
 @media screen and (min-width:450px) {
     .wrapper {
         max-inline-size: 1104px;
@@ -100,5 +145,17 @@ body {
 @media screen and (min-width:1020px) {
     .wrapper {
         margin-inline: auto;
+    }
+    .grid-markdown {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        justify-content: center;
+        margin-block-start: 56px;
+    }
+    .markdown,
+    .result-markdown {
+        display: block;
+        margin: 0;
     }
 }
