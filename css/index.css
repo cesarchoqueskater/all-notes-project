@@ -55,12 +55,7 @@ body {
 .button {
     padding-block: 8px;
     padding-inline: 24px;
-    background-color: var(--orange-2);
-    color: var(--black);
-    font: var(--button-bold);
-    border-radius: 36px;
     box-sizing: border-box;
-    border: none;
     cursor: pointer;
 }
 
@@ -72,6 +67,33 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    border: none;
+    background-color: var(--orange-2);
+    color: var(--black);
+    font: var(--button-bold);
+    border-radius: 36px;
+}
+
+.btn-upload,
+.btn-visibility {
+    background-color: var(--black);
+    color: var(--white);
+    font: var(--button-regular);
+    border-radius: 4px;
+}
+
+.btn-save {
+    background-color: var(--black);
+    color: var(--white);
+    font: var(--button-bold);
+    border-radius: 4px;
+}
+
+.btn-delete {
+    color: var(--grey-20);
+    border: 1px solid var(--grey-20);
+    font: var(--button-bold);
+    border-radius: 4px;
 }
 
 .content {
@@ -136,6 +158,26 @@ body {
     outline: none;
 }
 
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    font: var(--button-regular);
+}
+
+.option-plus {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 @media screen and (min-width:450px) {
     .wrapper {
         max-inline-size: 1104px;
@@ -157,5 +199,10 @@ body {
     .result-markdown {
         display: block;
         margin: 0;
+    }
+    .options,
+    .option-plus,
+    .actions {
+        flex-direction: row;
     }
 }
