@@ -107,8 +107,21 @@ body {
     margin-block-end: 80px;
 }
 
+.headline-4 {
+    font: var(--headline4);
+}
+
+.headline-4 span {
+    color: var(--grey-10);
+    text-transform: uppercase;
+    font: var(--body2-regular-default);
+    font-weight: bold;
+}
+
 .content-none {
-    font: var(--body1-regular-default)
+    margin-block-start: 16px;
+    font: var(--body1-regular-default);
+    color: var(--grey-10);
 }
 
 .grid-markdown {
@@ -176,6 +189,56 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.preview {
+    text-align: left;
+    margin-inline: 20px;
+    max-inline-size: 540px;
+    margin: auto;
+}
+
+.content-preview {
+    border: none;
+    block-size: 207px;
+    inline-size: 540px;
+    background-color: var(--grey);
+    padding: 24px;
+    text-align: left;
+}
+
+.title-preview {
+    font: var(--headline2);
+    margin-block-start: 56px;
+    margin-block-end: 32px;
+}
+
+.title-show {
+    font: var(--headline5);
+    margin-block-start: 56px;
+    margin-block-end: 32px;
+}
+
+.title-show span {
+    color: var(--grey-10);
+    font: var(--body2-regular-default);
+}
+
+.show-content {
+    text-align: left;
+    margin-inline: 20px;
+    max-inline-size: 540px;
+    margin: auto;
+}
+
+.content-show {
+    border: none;
+    font: var(--body1-regular-default);
+}
+
+.content-show-details {
+    font: var(--body1-regular-default);
+    color: var(--black);
 }
 
 @media screen and (min-width:450px) {
