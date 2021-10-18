@@ -42,12 +42,19 @@
         <div class="options">
             <div class="option-plus">
                 <div class="button btn-upload">Upload an image</div>
-                <div class="button btn-visibility">Visibility - <strong>Public</strong> <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M1.70711 0.292893C1.31658 -0.0976311 0.683418 -0.0976311 0.292893 0.292893C-0.0976311 0.683418 -0.0976311 1.31658 0.292893 1.70711L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711L13.7071 1.70711C14.0976 1.31658 14.0976 0.683418 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893Z"
-              fill="black" />
-          </svg>
-                </div>
+                <details class="button btn-visibility">
+                    <summary class="btn-visibility-summary">Visibility - <strong>Public</strong> <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1.70711 0.292893C1.31658 -0.0976311 0.683418 -0.0976311 0.292893 0.292893C-0.0976311 0.683418 -0.0976311 1.31658 0.292893 1.70711L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711L13.7071 1.70711C14.0976 1.31658 14.0976 0.683418 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893Z"
+                fill="black" />
+            </svg>
+                    </summary>
+                    <ul class="visibility-options">
+                        <li class="li-options">Private</li>
+                        <li class="li-options">Public</li>
+                        <li class="li-options">Unlistes (public) </li>
+                    </ul>
+                </details>
             </div>
             <div class="actions">
                 <div class="button btn-delete">Delete</div>
@@ -60,7 +67,7 @@
             <textarea autofocus class="textArea" name="textArea" id="textAreaId" placeholder="# This is your title"></textarea>
         </div>
         <div class="result-markdown">
-            <div class="result">
+            <div class="result" id="htmlResult">
                 <p class="headline-5">cesar.choquehuanca.com</p>
                 <p class="headline-2">This is your Tittle</p>
             </div>
@@ -76,7 +83,6 @@
     <div class="show-content">
         <h2 class="title-show">César Choquehuanca <span> PUBLIC</span></h2>
         <div class="content-show">
-            <!-- <p class="headline-4">Qué hay detrás de flex: 1; <span> PUBLIC</span></p> -->
             <p class="content-show-details">En [Flexbox](https://leonidasesteban.com/cursos/flexbox-componentes) es super común utilizar este valor para hacer que un elemento cubra todo el espacio</p>
         </div>
     </div>
