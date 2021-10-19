@@ -40,12 +40,20 @@ body {
     margin-inline: 20px;
 }
 
+.wrapperContent {
+    display: none;
+}
+
 .header-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-block: 40px;
+}
+
+.logo-icon {
+    cursor: pointer;
 }
 
 .button {
@@ -134,6 +142,14 @@ body {
     border: 1px solid var(--grey-20);
     font: var(--button-bold);
     border-radius: 4px;
+}
+
+div[aria-selected="true"] {
+    display: block;
+}
+
+div[aria-disabled="true"] {
+    display: none;
 }
 
 .content {
@@ -237,7 +253,7 @@ body {
     gap: 16px;
 }
 
-.preview {
+.previewContent {
     text-align: left;
     margin-inline: 20px;
     max-inline-size: 540px;
@@ -270,7 +286,7 @@ body {
     font: var(--body2-regular-default);
 }
 
-.show-content {
+.showContent {
     text-align: left;
     margin-inline: 20px;
     max-inline-size: 540px;
