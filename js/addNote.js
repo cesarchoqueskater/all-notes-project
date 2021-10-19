@@ -1,7 +1,7 @@
 import { showHideNote, showHideOptions, showHideGridMarkdown, showHidePreviewContent, showHideShowContent } from './showHideContent.js'
 
 export function addNoteMarkdown() {
-    const $note = document.querySelector('#noteContent')
+    // const $note = document.querySelector('#noteContent')
     console.log("Click en Escribir Nota")
     showHideNote()
     showHideGridMarkdown(true)
@@ -10,7 +10,7 @@ export function addNoteMarkdown() {
 }
 
 export function saveNoteMarkdown() {
-    const $saveNote = document.querySelector('#saveNote')
+    // const $saveNote = document.querySelector('#saveNote')
     console.log("Click en Guardar Nota")
     showHidePreviewContent(true)
     showHideGridMarkdown()
