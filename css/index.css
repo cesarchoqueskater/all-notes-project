@@ -267,6 +267,7 @@ div[aria-disabled="true"] {
     background-color: var(--grey);
     padding: 24px;
     text-align: left;
+    cursor: pointer;
 }
 
 .title-preview {

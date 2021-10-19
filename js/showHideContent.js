@@ -6,8 +6,8 @@ const $showContent = document.querySelector('#showContent')
 
 export function showHideNote(isShow) {
     if (isShow) {
-        $noteContent.removeAttribute('aria-selected')
-        $noteContent.setAttribute('aria-disabled', true)
+        $noteContent.removeAttribute('aria-disabled')
+        $noteContent.setAttribute('aria-selected', true)
         return isShow
     }
     $noteContent.removeAttribute('aria-selected')
@@ -53,8 +53,3 @@ export function showHideShowContent(isShow) {
     $showContent.removeAttribute('aria-selected')
     $showContent.setAttribute('aria-disabled', true)
 }
-
-// function loader(isLoading = false) {
-//     const img = isLoading ? 'url(./images/loading.gif)' : ''
-//     $screen.style.backgroundImage = img
-// }
