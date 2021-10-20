@@ -2,7 +2,7 @@ import { listDataNote } from './listShowPreviewContent.js'
 
 const $noteContent = document.querySelector('#noteContent')
 const $optionsContent = document.querySelector('#optionsContent')
-const $gridMarkdownContent = document.querySelector('#gridMarkdownContent')
+const $markdownContent = document.querySelector('#markdownContent')
 const $previewContent = document.querySelector('#previewContent')
 const $showContent = document.querySelector('#showContent')
 
@@ -26,14 +26,14 @@ export function showHideOptions(isShow) {
     $optionsContent.setAttribute('aria-disabled', true)
 }
 
-export function showHideGridMarkdown(isShow) {
+export function showHideMarkdown(isShow) {
     if (isShow) {
-        $gridMarkdownContent.removeAttribute('aria-disabled')
-        $gridMarkdownContent.setAttribute('aria-selected', true)
+        $markdownContent.removeAttribute('aria-disabled')
+        $markdownContent.setAttribute('aria-selected', true)
         return isShow
     }
-    $gridMarkdownContent.removeAttribute('aria-selected')
-    $gridMarkdownContent.setAttribute('aria-disabled', true)
+    $markdownContent.removeAttribute('aria-selected')
+    $markdownContent.setAttribute('aria-disabled', true)
 }
 
 export function showHidePreviewContent(isShow) {

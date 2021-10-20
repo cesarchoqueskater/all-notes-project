@@ -1,10 +1,10 @@
-import { showHideNote, showHideOptions, showHideGridMarkdown, showHidePreviewContent, showHideShowContent } from './showHideContent.js'
+import { showHideNote, showHideOptions, showHideMarkdown, showHidePreviewContent, showHideShowContent } from './showHideContent.js'
 import { saveNoteWrite, readArrayNote } from './saveNoteWriter.js'
 
 export function addNoteMarkdown() {
     console.log("Click en Escribir Nota")
     showHideNote()
-    showHideGridMarkdown(true)
+    showHideMarkdown(true)
     showHideOptions(true)
     showHidePreviewContent()
     showHideShowContent()
@@ -19,7 +19,7 @@ export function saveNoteMarkdown() {
         return true
     }
     showHidePreviewContent(true)
-    showHideGridMarkdown()
+    showHideMarkdown()
     showHideOptions()
 }
 
@@ -37,14 +37,14 @@ export function homeContent() {
     if (readArrayNote().length == 0) {
         showHideNote(true)
         showHideOptions()
-        showHideGridMarkdown()
+        showHideMarkdown()
         showHidePreviewContent()
         showHideShowContent()
         return true
     }
     showHideNote()
     showHidePreviewContent(true)
-    showHideGridMarkdown()
+    showHideMarkdown()
     showHideOptions()
 
 }
