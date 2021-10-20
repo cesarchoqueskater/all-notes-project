@@ -304,9 +304,14 @@ div[aria-disabled="true"] {
     font: var(--body1-regular-default);
 }
 
-.content-show-details {
-    font: var(--body1-regular-default);
-    color: var(--black);
+.content-show img {
+    width: 100%;
+}
+
+.showContentDetails {
+    margin-inline: 20px;
+    box-sizing: border-box;
+    margin-block-end: 20px;
 }
 
 @media screen and (min-width:450px) {
@@ -343,5 +348,8 @@ div[aria-disabled="true"] {
     .textArea,
     .resultContent {
         inline-size: 540px;
+    }
+    .showContentDetails {
+        margin-inline: 0;
     }
 }

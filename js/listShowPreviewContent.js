@@ -1,5 +1,6 @@
 import { readArrayNote } from './saveNoteWriter.js'
 import { createDOM } from './utils/dom.js'
+import { showDetailsNoteView } from './showDetailsNoteSave.js'
 
 export function cardShowPreviewContent(value, index) {
     return `
@@ -28,6 +29,11 @@ export function listDataNote() {
     getValuesArray.forEach((value, index) => {
         const $panel = createcardShowPreviewContent(value, index)
         $container.append($panel)
-            // debugger
+
+        const $selectedPreview = document.querySelector(`#selectedPreview-${index}`)
+            // Seleccionar alguno de los card para mostrar todo el detalle
+        $selectedPreview.addEventListener('click', () => {
+            showDetailsNoteView(value, index)
+        })
     })
 }

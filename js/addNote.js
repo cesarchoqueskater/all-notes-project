@@ -46,5 +46,15 @@ export function homeContent() {
     showHidePreviewContent(true)
     showHideMarkdown()
     showHideOptions()
+    showHideShowContent()
 
+}
+
+export function showDetailsNote() {
+    console.log("Click en Detalle de Nota")
+    showHideOptions()
+    showHideShowContent(true)
+    showHideNote()
+    showHidePreviewContent()
+    showHideMarkdown()
 }
