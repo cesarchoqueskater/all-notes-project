@@ -5,6 +5,7 @@ import { addNoteMarkdown } from './addNote.js'
 const $editNote = document.querySelector('#editNote')
 const textAreaId = document.querySelector('#textAreaId')
 const htmlResult = document.querySelector('#htmlResult')
+const selectedOptions = document.querySelector('#optionSelected')
 
 $editNote.addEventListener('click', () => {
 
@@ -27,5 +28,6 @@ export function editNoteContent() {
 
     textAreaId.value = getPositionArraytoEdit[0]
     htmlResult.innerHTML = getPositionArraytoEdit[1]
+    selectedOptions.innerText = getPositionArraytoEdit[2]
 
 }
