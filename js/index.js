@@ -10,7 +10,7 @@ const $home = document.querySelector('#home')
 
 $addNote.addEventListener('click', addNoteMarkdown)
 $saveNote.addEventListener('click', saveNoteMarkdown)
-$selectedPreview.addEventListener('click', selectedPreviewMarkdown)
+    // $selectedPreview.addEventListener('click', selectedPreviewMarkdown)
 $home.addEventListener('click', homeContent)
 textConvertToMarkdown()
 selectOptionVisibility()

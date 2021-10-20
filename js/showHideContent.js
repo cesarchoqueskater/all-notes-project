@@ -1,3 +1,5 @@
+import { listDataNote } from './listShowPreviewContent.js'
+
 const $noteContent = document.querySelector('#noteContent')
 const $optionsContent = document.querySelector('#optionsContent')
 const $gridMarkdownContent = document.querySelector('#gridMarkdownContent')
@@ -36,6 +38,8 @@ export function showHideGridMarkdown(isShow) {
 
 export function showHidePreviewContent(isShow) {
     if (isShow) {
+        // Listo las notas obtenidas
+        listDataNote()
         $previewContent.removeAttribute('aria-disabled')
         $previewContent.setAttribute('aria-selected', true)
         return isShow

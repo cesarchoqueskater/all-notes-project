@@ -1,17 +1,23 @@
 import { showHideNote, showHideOptions, showHideGridMarkdown, showHidePreviewContent, showHideShowContent } from './showHideContent.js'
+import { saveNoteWrite, readArrayNote } from './saveNoteWriter.js'
 
 export function addNoteMarkdown() {
-    // const $note = document.querySelector('#noteContent')
     console.log("Click en Escribir Nota")
     showHideNote()
     showHideGridMarkdown(true)
     showHideOptions(true)
+    showHidePreviewContent()
     showHideShowContent()
 }
 
 export function saveNoteMarkdown() {
-    // const $saveNote = document.querySelector('#saveNote')
     console.log("Click en Guardar Nota")
+    const valor = saveNoteWrite()
+        // console.log(valor)
+    if (valor == false) {
+        console.warn('No se puede guardar una nota que esta vacia')
+        return true
+    }
     showHidePreviewContent(true)
     showHideGridMarkdown()
     showHideOptions()
@@ -26,9 +32,19 @@ export function selectedPreviewMarkdown() {
 
 export function homeContent() {
     console.log("Click en Log - Home")
-    showHideNote(true)
-    showHideOptions()
+    console.log(readArrayNote().length)
+        // debugger
+    if (readArrayNote().length == 0) {
+        showHideNote(true)
+        showHideOptions()
+        showHideGridMarkdown()
+        showHidePreviewContent()
+        showHideShowContent()
+        return true
+    }
+    showHideNote()
+    showHidePreviewContent(true)
     showHideGridMarkdown()
-    showHidePreviewContent()
-    showHideShowContent()
+    showHideOptions()
+
 }
