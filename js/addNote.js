@@ -1,4 +1,4 @@
-import { showHideNote, showHideOptions, showHideMarkdown, showHidePreviewContent, showHideShowContent } from './showHideContent.js'
+import { showHideNote, showHideOptions, showHideMarkdown, showHidePreviewContent, showHideShowContent, showeditButtonNote } from './showHideContent.js'
 import { saveNoteWrite, readArrayNote } from './saveNoteWriter.js'
 
 export function addNoteMarkdown() {
@@ -8,6 +8,7 @@ export function addNoteMarkdown() {
     showHideOptions(true)
     showHidePreviewContent()
     showHideShowContent()
+    showeditButtonNote()
 }
 
 export function saveNoteMarkdown() {
@@ -21,12 +22,14 @@ export function saveNoteMarkdown() {
     showHidePreviewContent(true)
     showHideMarkdown()
     showHideOptions()
+    showeditButtonNote()
 }
 
 export function selectedPreviewMarkdown() {
     console.log("Click en Visualizar Nota")
     showHideShowContent(true)
     showHidePreviewContent()
+    showeditButtonNote()
 
 }
 
@@ -40,6 +43,7 @@ export function homeContent() {
         showHideMarkdown()
         showHidePreviewContent()
         showHideShowContent()
+        showeditButtonNote()
         return true
     }
     showHideNote()
@@ -47,6 +51,7 @@ export function homeContent() {
     showHideMarkdown()
     showHideOptions()
     showHideShowContent()
+    showeditButtonNote()
 
 }
 
@@ -54,6 +59,7 @@ export function showDetailsNote() {
     console.log("Click en Detalle de Nota")
     showHideOptions()
     showHideShowContent(true)
+    showeditButtonNote(true)
     showHideNote()
     showHidePreviewContent()
     showHideMarkdown()

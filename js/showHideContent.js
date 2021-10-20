@@ -5,6 +5,7 @@ const $optionsContent = document.querySelector('#optionsContent')
 const $markdownContent = document.querySelector('#markdownContent')
 const $previewContent = document.querySelector('#previewContent')
 const $showContent = document.querySelector('#showContent')
+const $editButtonNote = document.querySelector('#editNote')
 
 export function showHideNote(isShow) {
     if (isShow) {
@@ -56,4 +57,14 @@ export function showHideShowContent(isShow) {
     }
     $showContent.removeAttribute('aria-selected')
     $showContent.setAttribute('aria-disabled', true)
+}
+
+export function showeditButtonNote(isShow) {
+    if (isShow) {
+        $editButtonNote.removeAttribute('aria-disabled')
+        $editButtonNote.setAttribute('aria-selected', true)
+        return isShow
+    }
+    $editButtonNote.removeAttribute('aria-selected')
+    $editButtonNote.setAttribute('aria-disabled', true)
 }

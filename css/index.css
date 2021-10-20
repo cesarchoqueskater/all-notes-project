@@ -55,6 +55,12 @@ body {
     cursor: pointer;
 }
 
+.button-content {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
 .button {
     padding-block: 8px;
     padding-inline: 24px;
@@ -64,6 +70,14 @@ body {
 
 .button svg {
     margin-inline-start: 8px;
+}
+
+.button-edit {
+    background-color: var(--black);
+    color: var(--white);
+    font: var(--button-bold);
+    border-radius: 36px;
+    border: none;
 }
 
 .button-add {
@@ -268,6 +282,11 @@ div[aria-disabled="true"] {
     text-align: left;
     cursor: pointer;
     font: var(--body1-bold-default);
+}
+
+.contentPreview:hover {
+    background-color: var(--grey-10);
+    color: var(--white);
 }
 
 .contentPreview-small {
