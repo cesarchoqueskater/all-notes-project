@@ -189,7 +189,8 @@ div[aria-disabled="true"] {
     color: var(--grey-10);
 }
 
-.markdown {
+.markdownTextArea,
+.resultToMarkdowntoHTML {
     margin-inline: 20px;
 }
 
@@ -205,7 +206,10 @@ div[aria-disabled="true"] {
     overflow: auto;
     block-size: 741px;
     inline-size: -webkit-fill-available;
+    box-sizing: border-box;
     font: var(--body1-regular-default);
+    /* padding-block: 16px; */
+    padding-inline: 12px;
 }
 
 .resultContent img {
@@ -350,11 +354,6 @@ div[aria-disabled="true"] {
         justify-content: center;
         margin-block-start: 56px;
     }
-    .markdown,
-    .resultToMarkdowntoHTML {
-        display: block;
-        margin: 0;
-    }
     .options,
     .option-plus,
     .actions {
@@ -369,6 +368,10 @@ div[aria-disabled="true"] {
         inline-size: 540px;
     }
     .showContentDetails {
+        margin-inline: 0;
+    }
+    .markdownTextArea,
+    .resultToMarkdowntoHTML {
         margin-inline: 0;
     }
 }

@@ -3,6 +3,12 @@ import { saveNoteWrite, readArrayNote } from './saveNoteWriter.js'
 
 export function addNoteMarkdown() {
     console.log("Click en Escribir Nota")
+
+    const textAreaId = document.querySelector('#textAreaId')
+    const htmlResult = document.querySelector('#htmlResult')
+    textAreaId.value = ''
+    htmlResult.innerHTML = ''
+
     showHideNote()
     showHideMarkdown(true)
     showHideOptions(true)
@@ -63,4 +69,14 @@ export function showDetailsNote() {
     showHideNote()
     showHidePreviewContent()
     showHideMarkdown()
+}
+
+export function editNote() {
+    console.log("Click en Edit Nota")
+    showHideOptions(true)
+    showHideMarkdown(true)
+    showHideShowContent()
+    showeditButtonNote()
+    showHideNote()
+    showHidePreviewContent()
 }
