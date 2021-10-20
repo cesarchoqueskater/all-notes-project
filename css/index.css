@@ -170,7 +170,6 @@ div[aria-disabled="true"] {
 
 .visibility-title {
     display: block;
-    color: var(--grey-10);
     text-transform: uppercase;
     font: var(--body2-regular-default);
     font-weight: bold;
@@ -263,22 +262,28 @@ div[aria-disabled="true"] {
 }
 
 .previewContent {
+    margin-inline: 20px;
     text-align: left;
     margin-inline: 20px;
-    max-inline-size: 540px;
+    max-inline-size: none;
     padding-block-end: 40px;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .content-preview {
-    border: none;
+    box-sizing: border-box;
+    border-radius: 4px;
     block-size: 207px;
-    inline-size: 540px;
     background-color: var(--grey);
+    color: var(--grey-10);
     padding: 24px;
     text-align: left;
     cursor: pointer;
     font: var(--body1-bold-default);
+}
+
+.content-preview-small {
+    height: 159px;
     overflow: hidden;
 }
 
@@ -342,5 +347,9 @@ div[aria-disabled="true"] {
     .option-plus,
     .actions {
         flex-direction: row;
+    }
+    .previewContent {
+        margin: auto;
+        max-inline-size: 540px;
     }
 }

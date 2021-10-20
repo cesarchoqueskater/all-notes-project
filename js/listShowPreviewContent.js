@@ -4,8 +4,10 @@ import { createDOM } from './utils/dom.js'
 export function cardShowPreviewContent(value, index) {
     return `
         <div class="content-preview" id="selectedPreview-${index}">
-            <span class="visibility-title">${value[2]}</span>
-            ${value[1]}
+            <div class="content-preview-small">
+                <span class="visibility-title">${value[2]}</span>
+                ${value[1]}
+            </div>
         </div>
         `
 }
