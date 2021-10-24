@@ -1,5 +1,5 @@
-import { readArrayNote } from './saveNoteWriter.js'
 import { addNoteMarkdown } from './addNote.js'
+import { saveNoteWrite } from './saveNoteWriter.js'
 
 
 const $editNote = document.querySelector('#editNote')
@@ -7,27 +7,44 @@ const textAreaId = document.querySelector('#textAreaId')
 const htmlResult = document.querySelector('#htmlResult')
 const selectedOptions = document.querySelector('#optionSelected')
 
-$editNote.addEventListener('click', () => {
-
-    addNoteMarkdown()
-    editNoteContent()
-})
 
 
-export function editNoteContent() {
-    console.log('sE HIZO CLICK EN EDITAR')
-    const $showContent = document.querySelector('#showContent')
+export function editNoteContent(value, index) {
+
+    const dataValue = { value, index }
 
 
-    const getId = $showContent.firstElementChild.id
+    $editNote.addEventListener('click', () => {
+        console.log('sE HIZO CLICK EN EDITAR')
+            // debugger
+        const $markdownTextAreaIdentified = document.querySelector('.markdownTextArea')
+        $markdownTextAreaIdentified.setAttribute('aria-edit-content', true)
 
-    const getValue = getId.substring(19)
+        // Mostramos la vista de  markdown y result
+        addNoteMarkdown()
 
-    const data = readArrayNote()
-    const getPositionArraytoEdit = data[getValue]
+        textAreaId.value = dataValue.value[0]
+        htmlResult.innerHTML = dataValue.value[1]
+        selectedOptions.innerText = dataValue.value[2]
 
-    textAreaId.value = getPositionArraytoEdit[0]
-    htmlResult.innerHTML = getPositionArraytoEdit[1]
-    selectedOptions.innerText = getPositionArraytoEdit[2]
+        const valueToEdit = {
+            edit: true,
+            value,
+            index
+        }
+        saveEditNoteMarkdown(valueToEdit)
 
+    })
+
+}
+
+
+export function saveEditNoteMarkdown(valueToEdit) {
+
+    const $saveEditNote = document.querySelector('#saveNote')
+    $saveEditNote.addEventListener('click', () => {
+        debugger
+        saveNoteWrite(valueToEdit.edit, valueToEdit.value, valueToEdit.index)
+        return true
+    })
 }

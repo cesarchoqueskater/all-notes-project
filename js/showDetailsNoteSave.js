@@ -33,6 +33,14 @@ export function showDetailsNoteView(value, index) {
     $container.innerHTML = ''
     const $panel = createcardshowDetailsNoteView(markdown, resultHTML, visibility, index)
     $container.append($panel)
+        // Mostramos el boton editar y la logica para mandar los valores guardados a la vista del markdown
+    editNoteContent(value, index)
+        // const dataArray = { value, index }
 
-    editNoteContent()
+    // debugger
+    // return dataArray
+}
+
+export function sendDataShowDetailsNote() {
+
 }

@@ -9,6 +9,7 @@
     --orange-2: #ff6e6c;
     --purple: #1f1135;
     --grey: #e2daeb;
+    --blue-dark: #161b22;
     --headline1: 700 3rem/3.375rem Inter;
     --headline2: 700 2.375rem/2.700000047683716rem Inter;
     --headline3: 700 2rem/2rem Inter;
@@ -214,6 +215,13 @@ div[aria-disabled="true"] {
 
 .resultContent img {
     width: 100%;
+}
+
+pre {
+    background-color: var(--blue-dark);
+    color: var(--white);
+    padding: 20px;
+    overflow-x: auto;
 }
 
 .resultToMarkdowntoHTML .headline-2 {
