@@ -16,10 +16,10 @@ export function editNoteContent(value, index) {
 
     $editNote.addEventListener('click', () => {
         valuesEditArray.splice(0, valuesEditArray.length)
-        console.log('sE HIZO CLICK EN EDITAR')
+        console.log('SE HIZO CLICK EN EDITAR')
             // debugger
-        const $markdownTextAreaIdentified = document.querySelector('.markdownTextArea')
-        $markdownTextAreaIdentified.setAttribute('aria-edit-content', true)
+            // const $markdownTextAreaIdentified = document.querySelector('.markdownTextArea')
+            // $markdownTextAreaIdentified.setAttribute('aria-edit-content', true)
 
         // Mostramos la vista de  markdown y result
         addNoteMarkdown()
@@ -29,11 +29,10 @@ export function editNoteContent(value, index) {
         selectedOptions.innerText = dataValue.value[2]
 
         const valueToEdit = {
-                edit: true,
-                value,
-                index
-            }
-            // valueToEditData(valueToEdit)
+            edit: true,
+            value,
+            index
+        }
         valuesEditArray.push(valueToEdit)
         return true
 
