@@ -7,7 +7,7 @@ const textAreaId = document.querySelector('#textAreaId')
 const htmlResult = document.querySelector('#htmlResult')
 const selectedOptions = document.querySelector('#optionSelected')
 
-
+const valuesEditArray = []
 
 export function editNoteContent(value, index) {
 
@@ -15,6 +15,7 @@ export function editNoteContent(value, index) {
 
 
     $editNote.addEventListener('click', () => {
+        valuesEditArray.splice(0, valuesEditArray.length)
         console.log('sE HIZO CLICK EN EDITAR')
             // debugger
         const $markdownTextAreaIdentified = document.querySelector('.markdownTextArea')
@@ -28,23 +29,19 @@ export function editNoteContent(value, index) {
         selectedOptions.innerText = dataValue.value[2]
 
         const valueToEdit = {
-            edit: true,
-            value,
-            index
-        }
-        saveEditNoteMarkdown(valueToEdit)
+                edit: true,
+                value,
+                index
+            }
+            // valueToEditData(valueToEdit)
+        valuesEditArray.push(valueToEdit)
+        return true
 
     })
 
 }
 
 
-export function saveEditNoteMarkdown(valueToEdit) {
-
-    const $saveEditNote = document.querySelector('#saveNote')
-    $saveEditNote.addEventListener('click', () => {
-        debugger
-        saveNoteWrite(valueToEdit.edit, valueToEdit.value, valueToEdit.index)
-        return true
-    })
+export function valueToEditData() {
+    return valuesEditArray
 }

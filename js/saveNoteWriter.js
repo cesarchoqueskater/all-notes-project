@@ -1,30 +1,45 @@
+import { valueToEditData } from './editNoteContent.js'
+
 const arrayNote = []
 
 
 const textAreaId = document.querySelector('#textAreaId')
 const htmlResult = document.querySelector('#htmlResult')
 
-// const valueToEditDefault = {
-//     edit: false
-// }
+export function saveNoteWrite(valueToEdit = false) {
 
-// const valueToEdit = valueToEditDefault.edit
-// debugger
-export function saveNoteWrite(valueToEdit = false, value, index) {
+    //Buscar el valor del array
+    const data = readArrayNote()
 
+    const editOption = valueToEditData().length == '0' ? valueToEdit : valueToEditData()[0]["edit"]
 
+    //Valor de la optionSelectionVisibility
     const selectedOptions = document.querySelector('#optionSelected').textContent
 
     if (textAreaId.textLength !== 0) {
-        debugger
-        if (valueToEdit == true) {
+        // debugger
+        if (editOption == true) {
             console.log('Ingreso para editar Nota y guardarla')
+
+            // Obtenemos el indice del arreglo al cual hemos seleccionado para editar
+            const indexToEdit = valueToEditData()[0]['index']
+                // Obtenemos los datos del array para editar
+            const arraySelected = data[indexToEdit]
+
+            // Seteamos los nuevos valores, del edit
+            arraySelected[0] = textAreaId.value
+            arraySelected[1] = htmlResult.innerHTML
+            arraySelected[2] = selectedOptions
+
+            // Convertimos al array en vacio
+            valueToEditData().length = '0'
 
             return arrayNote
 
         } else {
             console.log('Se procede a guardar la nota')
-                // debugger
+            console.log("opcion :" + editOption)
+                // valueToEditData().splice(0, valueToEdit.length)
             arrayNote.push([textAreaId.value, htmlResult.innerHTML, selectedOptions]);
             // console.log(arrayNote)
             resetInput()
@@ -37,7 +52,6 @@ export function saveNoteWrite(valueToEdit = false, value, index) {
 }
 
 export function readArrayNote() {
-    // console.log(arrayNote)
     return arrayNote
 }
 

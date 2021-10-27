@@ -21,7 +21,7 @@ export function createcardShowPreviewContent(value, index) {
 
 export function listDataNote() {
     const getValuesArray = readArrayNote()
-    console.log(getValuesArray)
+        // console.log(getValuesArray)
         // debugger
     const $container = document.querySelector('#listPreviewContent')
         // Reseteo el dom para traer las notas en el array
