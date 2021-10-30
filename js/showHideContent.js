@@ -7,6 +7,7 @@ const $previewContent = document.querySelector('#previewContent')
 const $showContent = document.querySelector('#showContent')
 const $editButtonNote = document.querySelector('#editNote')
 const $showModalContent = document.querySelector('#showModal')
+const $showButtonDelete = document.querySelector('#openModal')
 
 export function showHideNote(isShow) {
     if (isShow) {
@@ -78,5 +79,12 @@ export function showHideModal(isShow) {
     }
     $showModalContent.removeAttribute('aria-open-modal')
     $showModalContent.setAttribute('aria-disabled-modal', true)
+}
 
+export function showButtonDelete(isShow) {
+    if (isShow) {
+        $showButtonDelete.style.display = 'block'
+        return isShow
+    }
+    $showButtonDelete.style.display = 'none'
 }

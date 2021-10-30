@@ -1,6 +1,5 @@
 import { addNoteMarkdown } from './addNote.js'
-import { saveNoteWrite } from './saveNoteWriter.js'
-
+import { showButtonDelete } from './showHideContent.js'
 
 const $editNote = document.querySelector('#editNote')
 const textAreaId = document.querySelector('#textAreaId')
@@ -15,15 +14,14 @@ export function editNoteContent(value, index) {
 
 
     $editNote.addEventListener('click', () => {
+
+        // Se deja vacio el array
         valuesEditArray.splice(0, valuesEditArray.length)
-        console.log('SE HIZO CLICK EN EDITAR')
-            // debugger
-            // const $markdownTextAreaIdentified = document.querySelector('.markdownTextArea')
-            // $markdownTextAreaIdentified.setAttribute('aria-edit-content', true)
 
-        // Mostramos la vista de  markdown y result
+        console.log('Se hizo click en el button editar')
+            // Mostramos la vista de  markdown y result
         addNoteMarkdown()
-
+        showButtonDelete(true)
         textAreaId.value = dataValue.value[0]
         htmlResult.innerHTML = dataValue.value[1]
         selectedOptions.innerText = dataValue.value[2]

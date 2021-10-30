@@ -2,7 +2,7 @@ import { addNoteMarkdown, saveNoteMarkdown, homeContent } from './addNote.js'
 import textConvertToMarkdown from './markedMarkdown.js'
 import selectOptionVisibility from './optionVisibility.js'
 import uploadImage from './uploadImage.js'
-import { openModalContent } from './utils/openModal.js'
+import { openModalContent } from './openModal.js'
 
 
 const $addNote = document.querySelector('#addNote')

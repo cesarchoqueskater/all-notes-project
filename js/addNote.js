@@ -1,4 +1,4 @@
-import { showHideNote, showHideOptions, showHideMarkdown, showHidePreviewContent, showHideShowContent, showeditButtonNote, showHideModal } from './showHideContent.js'
+import { showHideNote, showHideOptions, showHideMarkdown, showHidePreviewContent, showHideShowContent, showeditButtonNote, showHideModal, showButtonDelete } from './showHideContent.js'
 import { saveNoteWrite, readArrayNote } from './saveNoteWriter.js'
 
 export function addNoteMarkdown() {
@@ -15,6 +15,7 @@ export function addNoteMarkdown() {
     showHidePreviewContent()
     showHideShowContent()
     showeditButtonNote()
+    showButtonDelete()
 }
 
 export function saveNoteMarkdown() {
@@ -29,6 +30,7 @@ export function saveNoteMarkdown() {
     showHideMarkdown()
     showHideOptions()
     showeditButtonNote()
+    showButtonDelete()
 }
 
 export function selectedPreviewMarkdown() {
@@ -36,12 +38,13 @@ export function selectedPreviewMarkdown() {
     showHideShowContent(true)
     showHidePreviewContent()
     showeditButtonNote()
+    showButtonDelete()
 
 }
 
 export function homeContent() {
     console.log("Click en Log - Home")
-    console.log(readArrayNote().length)
+        // console.log(readArrayNote().length)
         // debugger
     if (readArrayNote().length == 0) {
         showHideNote(true)
@@ -50,6 +53,7 @@ export function homeContent() {
         showHidePreviewContent()
         showHideShowContent()
         showeditButtonNote()
+        showButtonDelete()
         return true
     }
     showHideNote()
@@ -58,6 +62,7 @@ export function homeContent() {
     showHideOptions()
     showHideShowContent()
     showeditButtonNote()
+    showButtonDelete()
 
 }
 

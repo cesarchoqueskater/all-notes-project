@@ -10,6 +10,7 @@ export function saveNoteWrite(valueToEdit = false) {
 
     //Buscar el valor del array
     const data = readArrayNote()
+        // console.log(data)
 
     const editOption = valueToEditData().length == '0' ? valueToEdit : valueToEditData()[0]["edit"]
 
@@ -38,7 +39,7 @@ export function saveNoteWrite(valueToEdit = false) {
 
         } else {
             console.log('Se procede a guardar la nota')
-            console.log("opcion :" + editOption)
+                // console.log("opcion :" + editOption)
                 // valueToEditData().splice(0, valueToEdit.length)
             arrayNote.push([textAreaId.value, htmlResult.innerHTML, selectedOptions]);
             // console.log(arrayNote)
