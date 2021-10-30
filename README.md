@@ -46,16 +46,16 @@ Has click en el enlace para ver el  **[resultado](https://cesarchoqueskater.gith
   <table>
    <tr>
     <td style="text-align:center">
-        <img width="250px"  src="./screenshots/screen_mobile_home.png" />
+        <img width="250px"  src="https://raw.githubusercontent.com/cesarchoqueskater/all-notes-project/master/screenshots/screen_mobile_home.PNG" />
     </td>
     <td style="text-align:center">
-        <img width="250px"  src="./screenshots/screen_mobile_addNote.png" />
+        <img width="250px"  src="https://raw.githubusercontent.com/cesarchoqueskater/all-notes-project/master/screenshots/screen_mobile_addNote.PNG" />
     </td>
     <td style="text-align:center">
-        <img width="250px"  src="./screenshots/screen_mobile_list_MORE.png" />
+        <img width="250px"  src="https://raw.githubusercontent.com/cesarchoqueskater/all-notes-project/master/screenshots/screen_mobile_list_more.PNG" />
     </td>
      <td style="text-align:center">
-        <img width="250px"  src="./screenshots/screen_mobile_listShowNote.png" />
+        <img width="250px"  src="https://raw.githubusercontent.com/cesarchoqueskater/all-notes-project/master/screenshots/screen_mobile_listShowNote.PNG" />
         </td>
   </table>
  </div>
