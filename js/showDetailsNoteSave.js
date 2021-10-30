@@ -1,5 +1,5 @@
 import { readArrayNote } from './saveNoteWriter.js'
-import { showDetailsNote } from './addNote.js'
+import { showDetailsNote } from './optionsContent.js'
 import { createDOM } from './utils/dom.js'
 import { editNoteContent } from './editNoteContent.js'
 

@@ -1,6 +1,6 @@
-import { openModal, closeModal } from './addNote.js'
+import { openModal, closeModal } from './optionsContent.js'
 import { createDOM } from './utils/dom.js'
-import { homeContent } from './addNote.js'
+import { homeContent } from './optionsContent.js'
 import { readArrayNote } from './saveNoteWriter.js'
 import { valueToEditData } from './editNoteContent.js'
 

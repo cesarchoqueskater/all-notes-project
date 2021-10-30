@@ -1,4 +1,4 @@
-import { addNoteMarkdown } from './addNote.js'
+import { addNoteMarkdown } from './optionsContent.js'
 import { showButtonDelete } from './showHideContent.js'
 
 const $editNote = document.querySelector('#editNote')

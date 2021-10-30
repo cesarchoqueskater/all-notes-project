@@ -1,4 +1,4 @@
-import { addNoteMarkdown, saveNoteMarkdown, homeContent } from './addNote.js'
+import { addNoteMarkdown, saveNoteMarkdown, homeContent } from './optionsContent.js'
 import textConvertToMarkdown from './markedMarkdown.js'
 import selectOptionVisibility from './optionVisibility.js'
 import uploadImage from './uploadImage.js'
