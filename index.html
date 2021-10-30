@@ -63,7 +63,7 @@
                     </details>
                 </div>
                 <div class="actions">
-                    <div class="button btn-delete">Delete</div>
+                    <div class="button btn-delete" id="openModal">Delete</div>
                     <div class="button btn-save" id="saveNote">Save</div>
                 </div>
             </div>
@@ -86,9 +86,8 @@
         <h2 class="title-preview">César Choquehuanca</h2>
         <div class="listPreviewContent" id="listPreviewContent"></div>
     </div>
-    <div class="showContent" id="showContent" aria-disabled="true">
-
-    </div>
+    <div class="showContent" id="showContent" aria-disabled="true"></div>
+    <div class="modalContent" id="showModal" aria-disabled-modal="true"></div>
     <script src="./js/index.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>

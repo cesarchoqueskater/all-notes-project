@@ -35,12 +35,5 @@ export function showDetailsNoteView(value, index) {
     $container.append($panel)
         // Mostramos el boton editar y la logica para mandar los valores guardados a la vista del markdown
     editNoteContent(value, index)
-        // const dataArray = { value, index }
-
-    // debugger
-    // return dataArray
-}
-
-export function sendDataShowDetailsNote() {
-
+        // return dataArray
 }

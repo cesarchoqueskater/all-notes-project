@@ -1,4 +1,4 @@
-import { showHideNote, showHideOptions, showHideMarkdown, showHidePreviewContent, showHideShowContent, showeditButtonNote } from './showHideContent.js'
+import { showHideNote, showHideOptions, showHideMarkdown, showHidePreviewContent, showHideShowContent, showeditButtonNote, showHideModal } from './showHideContent.js'
 import { saveNoteWrite, readArrayNote } from './saveNoteWriter.js'
 
 export function addNoteMarkdown() {
@@ -79,4 +79,14 @@ export function editNote() {
     showeditButtonNote()
     showHideNote()
     showHidePreviewContent()
+}
+
+export function openModal() {
+    console.log("Click para abrir modal")
+    showHideModal(true)
+}
+
+export function closeModal() {
+    console.log("Click para cerrar modal")
+    showHideModal()
 }

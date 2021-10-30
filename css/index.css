@@ -35,6 +35,10 @@ body {
     background-color: var(--white);
 }
 
+a {
+    text-decoration: none;
+}
+
 .wrapper {
     max-inline-size: 370px;
     margin-inline: 20px;
@@ -162,11 +166,29 @@ body {
     border-radius: 4px;
 }
 
+.btn-delete-confirm {
+    background-color: var(--orange-2);
+    color: var(--black);
+    font: var(--button-bold);
+    border-radius: 4px;
+}
+
 div[aria-selected="true"] {
     display: block;
 }
 
 div[aria-disabled="true"] {
+    display: none;
+}
+
+div[aria-open-modal="true"] {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+div[aria-disabled-modal="true"] {
     display: none;
 }
 
@@ -352,6 +374,48 @@ pre {
     margin-inline: 20px;
     box-sizing: border-box;
     margin-block-end: 20px;
+}
+
+.title-modal {
+    font: var(--headline4);
+}
+
+.content-modal {
+    font: var(--body1-regular-default)
+}
+
+.actions-button {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.modalContent {
+    position: fixed;
+    background: rgba(127, 127, 127, 0.65);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.modalContent>div {
+    width: 540px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+}
+
+.open-modal {
+    padding: 24px;
+    border-radius: 16px;
 }
 
 @media screen and (min-width:450px) {
