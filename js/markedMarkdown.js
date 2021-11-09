@@ -3,6 +3,6 @@ export default function textConvertToMarkdown() {
     const copyValue = document.getElementById("htmlResult");
     textArea.addEventListener('keyup', e => {
         const currentContent = e.target.value;
-        copyValue.innerHTML = marked(currentContent);
+        copyValue.innerHTML = marked.parse(currentContent);
     });
 }
